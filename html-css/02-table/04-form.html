@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    <form action="name.js" method="get" name="name1">
+        <p>
+            <label for="name">姓名：</label>
+            <input type="text" name="name" id="name" placeholder="请输入姓名">
+        </p>
+        <p>
+            <label for="where">籍贯：</label>
+            <select name="where" id="where">
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="3">广州</option>
+                <option value="4">深圳</option>
+            </select>
+        </p>
+        <p>
+            <label for="sex">性别: </label>
+            <!-- radio单选按钮 可以实现多选 -->
+            <!-- name是表单元素名字，这里性别是单选按钮必须有相同的名字 -->
+            <input type="radio" name="sex" id="sex man" value="man"> <label for="sex man">男</label>
+            <input type="radio" name="sex" id="sex woman" value="woman"> <label for="sex woman">女</label>
+        </p>
+        <p>
+            <label for="age">年龄：</label>
+            <input type="text" name="age" id="age" placeholder="请输入年龄">
+        </p>
+        <p>
+            <label for="email">邮箱：</label>
+            <input type="text" name="email" id="email" placeholder="请输入邮箱">
+        </p>
+        <p>
+            <label for="phone">手机号：</label>
+            <input type="text" name="phone" id="phone" placeholder="请输入手机号">
+        </p>
+        <p>
+            <label for="address">地址：</label>
+            <input type="text" name="address" id="address" placeholder="请输入地址">
+        </p>
+        <p>
+            <label for="password">密码：</label>
+            <input type="password" name="password" id="password" placeholder="请输入密码">
+        </p>
+        <p>
+            <label for="password2">确认密码：</label>
+            <input type="password" name="password2" id="password2" placeholder="请再次输入密码">
+        </p>
+        <p>
+            <label for="hobby[]">爱好：</label>
+            <input type="checkbox" name="hobby[]" id="hobby" value="sw" checked="checked">游泳
+            <input type="checkbox" name="hobby[]" id="hobby" value="2">羽毛球
+            <input type="checkbox" name="hobby[]" id="hobby" value="3">乒乓球
+            <input type="checkbox" name="hobby[]" id="hobby" value="4">篮球
+        </p>
+        
+        <p>
+            <label for="textarea"></label>
+            <textarea name="textarea" id="textarea" cols="30" rows="5">输入其他信息</textarea>
+        </p>
+        <p>
+            <label for="submit">提交</label>
+            <input type="submit" name="submit" id="submit" value="提交">
+            <label for="reset">重置</label>
+            <input type="reset" name="reset" id="reset" value="重新填写">
+        </p>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*a:link 未访问过的连接，把所有没有访问过的连接选择出来*/
+        a:link {
+            color: black;
+        }
+
+        /*a:visited 已访问过的连接，把所有已访问过的连接选择出来*/
+        a:visited {
+            color: orange;
+        }
+
+        /*a:hover 鼠标放上去的连接，把所有鼠标放上去的连接选择出来*/
+        a:hover,
+        div:hover {
+            color: skyblue;
+        }
+
+        /*a:active 鼠标点击后的连接，把所有鼠标点击后的连接选择出来*/
+        a:active,
+        div:active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">空连接1</a>
+    <a href="https://www.baidu.com/" target="_blank">百度</a>
+    <a href="#">空连接3</a>
+    <div>哈哈哈哈哈</div>
+</body>
+
+</html>
