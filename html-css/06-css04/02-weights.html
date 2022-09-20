@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weights</title>
+    <style>
+        /* 
+        1、权重由4组数组组成，但不会有进位
+        2、可以理解为类选择器永远大于元素选择器，id选择器永远大于类选择器，依次类推
+        3、等级判断从左到右，如果某一位相同，判断下一位
+        4、记忆方法：通配符和继承权重为0，
+                    标签选择器为1，
+                    类选择器为10,
+                    id选择器为100，
+                    行内样式表达式为1000，
+                    !important 无穷大
+        */
+
+        /* li的权重0，0，0，1   1 */
+        li {
+            color: red;
+        }
+
+        /* 符合选择器会有权重叠加的问题 */
+        /* 权重虽然会叠加，但是永远不会进位 */
+        /* ul li 权重 0,0,0,1 + 0,0,0,1 = 0,0,0,2  2 */
+        ul li{
+            color: green;
+        }
+        /* .nav li 权重  0,0,1,0 + 0,0,0,1 = 0,0,1,1  11*/
+        .nav li {
+            color: pink;
+        }
+
+        /*第一个li变红色且加粗*/
+        .nav .red {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="red">11111</li>
+        <li>22222</li>
+        <li>33333</li>
+    </ul>
+</body>
+</html>
