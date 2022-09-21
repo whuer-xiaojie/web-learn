@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Margin</title>
+    <style>
+        /* 这句话也是CSS的第一行代码 */
+        * {
+            margin: 0;
+            /*清除内边距*/
+            padding: 0;
+            /*清除外边距*/
+        }
+
+        span {
+            background-color: pink;
+            /* 行内元素如果要上行内外间距，改为块元素或者行内快元素 */
+            display: inline-block;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    123
+    <ul>
+        <li>adcd</li>
+    </ul>
+    <span>行内元素尽量只设置左右外边距，不设置上线外边距</span>
+</body>
+
+</html>
