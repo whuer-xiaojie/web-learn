@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+            background-color: green;
+
+        }
+
+        div:hover {
+            /* 
+            h-shadow 必须，水平阴影位置，必须赋值 
+            v-shadow 必须，垂直阴影位置，必须赋值
+            blur   可选，模糊距离
+            spread 可选，阴影尺寸
+            color  可选，阴影颜色
+            inset  可选，将外部阴影改为内部阴影
+            */
+            box-shadow: 10px 10px 10px -4px rgba(0,0,0,.3) inset;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
