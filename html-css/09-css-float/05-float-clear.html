@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top {
+            width: 800px;
+            border: 1px solid rebeccapurple;
+            background-color: gray;
+            /* 清除浮动 */
+            overflow: hidden;
+        }
+
+        .first {
+            width: 300px;
+            height: 300px;
+            background-color: yellowgreen;
+            float: left;
+        }
+
+        .second {
+            width: 400px;
+            height: 200px;
+            background-color: aquamarine;
+            float: left;
+        }
+
+        .bottom {
+            width: 800px;
+            height: 600px;
+            background-color: blanchedalmond;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- first second 添加浮动以后，top的div没有给高度（目的是让父元素自动根据子元素计算），子元素给了浮动属性以后，top不在占用高度-->
+    
+    <div class="top">
+        <div class="first"></div>
+        <div class="second"></div>
+        <!-- 清除浮动元素脱离标准流带来的影响 -->
+        <!-- 清除浮动以后，父级就会更具浮动的子盒子自动检测高度，就不会影响到下面的标准流了 -->
+        <!-- 添加一个空标签进行隔离（必须是快级元素，不能是行内元素） -->
+        <!-- 隔离法 -->
+        <!-- <div style="clear: both;"></div> -->
+    </div>
+    <div class="bottom"></div>
+</body>
+
+</html>
